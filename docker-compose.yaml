@@ -1,0 +1,12 @@
+services:
+  arm-ubuntu24-service:
+    image: arm-ubuntu24
+    container_name: arm-ubuntu24-yaml
+    hostname: arm-ubuntu24
+    user: dev
+    stdin_open: true
+    restart: always
+    environment:
+      - no_proxy=storage.googleapis.com,commondatastorage.googleapis.com
+    # devices:
+    # volumes:

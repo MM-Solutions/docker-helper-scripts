@@ -1,0 +1,28 @@
+{
+    "cdiVersion" : "0.6.0",
+    "kind" : "experiment.com/device",
+    "devices" : [
+        {
+            "name" : "my",
+            "containerEdits" : {
+                "env" : [
+                    "no_proxy=storage.googleapis.com,commondatastorage.googleapis.com"
+                ],
+                "deviceNodes" : [
+                    {
+                        "path" : "/dev/null"
+                    }
+                ],
+                "mounts" : [
+                    {
+                        "hostPath" : "/home/myuser/work/shared",
+                        "containerPath" : "/mnt/shared",
+                        "options" : [
+                            "bind"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
